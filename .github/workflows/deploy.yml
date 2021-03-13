@@ -18,10 +18,10 @@ jobs:
   
     - name: Build the frontend Docker Image
       run: |
-        docker build . --file Dockerfile --tag nax2uk/devops-001
+        docker build . --file Dockerfile --tag azlinayeo/devops-001
     - name: Docker push 
       run: |
-        docker push nax2uk/devops-001
+        docker push azlinayeo/devops-001
     - name: Deploy
       uses: appleboy/ssh-action@master
       with:
