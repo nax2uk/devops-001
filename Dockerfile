@@ -1,9 +1,11 @@
 FROM node:14.14.0-alpine as builder 
+
+RUN mkdir /app
 WORKDIR /app
-COPY ./package.json ./
-COPY ./package-lock.json ./
+COPY package.json /app
+
 RUN npm install
-COPY ./ ./
+COPY . /app
 RUN npm run build
 
 FROM nginx
