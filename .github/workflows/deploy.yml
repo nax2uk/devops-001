@@ -30,9 +30,7 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          ls -a
-          pwd
+          cd devops-001
           docker-compose down
           docker-compose pull
           docker-compose up --build -d
-          
